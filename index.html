@@ -82,12 +82,20 @@
 				<div class="inner">
 					<h2>Projects</h2>
 					<p>From time to time I like to work on my own projects; whether I want to learn something or if I am trying to fix a problem that I am having. I'll have these projects linked below. It might look a little bit empty right now, but bear with me.</p>
+					<div id="demoSection" class="wrapper align-center hidden">
+						<div class="inner">
+							<h2>Test</h2>
+							<ul class="icons align-right">
+								<li><a class="icon fa-times" onclick="hideDemoSection()"></a></li>
+							</ul>	
+						</div>
+					</div>
 					<div class="items style1 medium">
 						<section>
 							<h3>Lorem</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 							<ul class="icons">
-								<li><a class="button">Demo</a></li>
+								<li><a class="button" onclick="showDemoSection()">Demo</a></li>
 								<li><a href="https://github.com/waezdewan" target="_blank" class="icon style2 fa-file-code"><span class="label">Code</span></a></li>
 							</ul>
 						</section>
@@ -105,6 +113,18 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			function showDemoSection() {
+				let element = document.getElementById("demoSection")
+				element.style.display = "block";
+			}
+		</script>
+		<script>
+			function hideDemoSection() {
+				let element = document.getElementById("demoSection")
+				element.style.display = "none";
+			}
+		</script>
 
 	</body>
 </html>
